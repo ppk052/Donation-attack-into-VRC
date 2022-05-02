@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Donation_attack_into_VRC", "Donation to Unity\Donation_attack_into_VRC.csproj", "{0D21B75E-9843-4F37-8AF5-D3014A3E8B17}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "makesetup", "makesetup\makesetup.vdproj", "{44FFA679-EC81-4E54-84CC-5BA5E3949E14}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D21B75E-9843-4F37-8AF5-D3014A3E8B17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D21B75E-9843-4F37-8AF5-D3014A3E8B17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D21B75E-9843-4F37-8AF5-D3014A3E8B17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D21B75E-9843-4F37-8AF5-D3014A3E8B17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44FFA679-EC81-4E54-84CC-5BA5E3949E14}.Debug|Any CPU.ActiveCfg = Debug
+		{44FFA679-EC81-4E54-84CC-5BA5E3949E14}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F345BF69-983C-4425-BB43-9712C8E4F9E0}
+	EndGlobalSection
+EndGlobal
