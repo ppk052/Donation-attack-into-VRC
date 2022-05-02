@@ -258,6 +258,7 @@ namespace Donation_attack_into_VRC
                     }
             }
         }
+
     }
 
     //json파일을 읽기위한 사전작업
@@ -338,6 +339,7 @@ namespace Donation_attack_into_VRC
                     catch
                     {
                         MessageBox.Show("VR챗의 OSC를 켜주세요");
+                        userid_text.Enabled = true;
                     }
                 }
 
