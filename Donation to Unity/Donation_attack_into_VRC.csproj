@@ -169,6 +169,7 @@
   <ItemGroup>
     <Content Include="Moneygun.ico" />
     <Content Include="Moneygun1.ico" />
+    <None Include="Resources\디스코드.png" />
     <None Include="Resources\도움말 링크.JPG" />
     <None Include="Resources\도움말사진.JPG" />
     <None Include="Resources\머니건콩나물1.png" />

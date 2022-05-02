@@ -47,83 +47,134 @@ namespace Donation_attack_into_VRC
 
         //2. 상황에 따른 콤보박스 아이템설정
         private void parameter_combo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var a = para[avartname_combo.SelectedItem.ToString()];
-            parametertype_text.Text = a[parameter_combo.SelectedIndex][1];
-            if (parametertype_text.Text == "Bool")
+        {   
+            try
             {
-                setparameter_combo.Items.Clear();
-                setparameter_combo.Items.Add("값변경");
-                setparameter_combo.Items.Add("값변경후복귀");
+                var a = para[avartname_combo.SelectedItem.ToString()];
+                parametertype_text.Text = a[parameter_combo.SelectedIndex][1];
+                if (parametertype_text.Text == "Bool")
+                {
+                    setparameter_combo.Items.Clear();
+                    setparameter_combo.Items.Add("값변경");
+                    setparameter_combo.Items.Add("값변경후복귀");
+                }
+                else if (parametertype_text.Text == "Int")
+                {
+                    setparameter_combo.Items.Clear();
+                    setparameter_combo.Items.Add("랜덤");
+                    setparameter_combo.Items.Add("값변경");
+                    setparameter_combo.Items.Add("값변경후복귀");
+                }
+                else if (parameter_combo.SelectedItem == null)
+                {
+
+                }
             }
-            else
+            catch
             {
-                setparameter_combo.Items.Clear();
-                setparameter_combo.Items.Add("랜덤");
-                setparameter_combo.Items.Add("값변경");
-                setparameter_combo.Items.Add("값변경후복귀");
+                
             }
+            
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (donation_combo.SelectedIndex == 0)
+            try
             {
-                donationmin_text.Visible = true;
-                donationmax_text.Visible = true;
-                donation_label.Visible = true;
-                donationsame_text.Visible = false;
+                if (donation_combo.SelectedItem == null)
+                {
+
+                }
+                else if(donation_combo.SelectedIndex == 0)
+                {
+                    donationmin_text.Visible = true;
+                    donationmax_text.Visible = true;
+                    donation_label.Visible = true;
+                    donationsame_text.Visible = false;
+                }
+                else if (donation_combo.SelectedIndex == 1)
+                {
+                    donationmin_text.Visible = false;
+                    donationmax_text.Visible = false;
+                    donation_label.Visible = false;
+                    donationsame_text.Visible = true;
+                }
             }
-            else if (donation_combo.SelectedIndex == 1)
+            catch
             {
-                donationmin_text.Visible = false;
-                donationmax_text.Visible = false;
-                donation_label.Visible = false;
-                donationsame_text.Visible = true;
+                
             }
+            
         }
         private void setparameter_combo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (setparameter_combo.SelectedItem.ToString() == "랜덤")
+            try
             {
-                randommax_text.Visible = true;
-                randommin_text.Visible = true;
-                random_lable.Visible = true;
-                settime1st_text.Visible = false;
-                settime2nd_text.Visible = false;
-                settimetime_text.Visible = false;
-                settime_lable.Visible = false;
-                set_text.Visible = false;
+                if (setparameter_combo.SelectedItem == null)
+                {
+                    
+                }
+                else if(setparameter_combo.SelectedItem.ToString() == "랜덤")
+                {
+                    randommax_text.Visible = true;
+                    randommin_text.Visible = true;
+                    random_lable.Visible = true;
+                    settime1st_text.Visible = false;
+                    settime2nd_text.Visible = false;
+                    settimetime_text.Visible = false;
+                    settime_lable.Visible = false;
+                    set_text.Visible = false;
+                }
+                else if (setparameter_combo.SelectedItem.ToString() == "값변경")
+                {
+                    randommax_text.Visible = false;
+                    randommin_text.Visible = false;
+                    random_lable.Visible = false;
+                    settime1st_text.Visible = false;
+                    settime2nd_text.Visible = false;
+                    settimetime_text.Visible = false;
+                    settime_lable.Visible = false;
+                    set_text.Visible = true;
+                }
+                else if (setparameter_combo.SelectedItem.ToString() == "값변경후복귀")
+                {
+                    randommax_text.Visible = false;
+                    randommin_text.Visible = false;
+                    random_lable.Visible = false;
+                    settime1st_text.Visible = true;
+                    settime2nd_text.Visible = true;
+                    settimetime_text.Visible = true;
+                    settime_lable.Visible = true;
+                    set_text.Visible = false;
+                }
+
             }
-            else if (setparameter_combo.SelectedItem.ToString() == "값변경")
+            catch
             {
-                randommax_text.Visible = false;
-                randommin_text.Visible = false;
-                random_lable.Visible = false;
-                settime1st_text.Visible = false;
-                settime2nd_text.Visible = false;
-                settimetime_text.Visible = false;
-                settime_lable.Visible = false;
-                set_text.Visible = true;
+                
             }
-            else if (setparameter_combo.SelectedItem.ToString() == "값변경후복귀")
-            {
-                randommax_text.Visible = false;
-                randommin_text.Visible = false;
-                random_lable.Visible = false;
-                settime1st_text.Visible = true;
-                settime2nd_text.Visible = true;
-                settimetime_text.Visible = true;
-                settime_lable.Visible = true;
-                set_text.Visible = false;
-            }
+            
         }
         private void avartname_combo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            parameter_combo.Items.Clear();
-            var a = para[avartname_combo.SelectedItem.ToString()];
-            for (int j = 0; j < a.Count; j++)
+            try
+            {                
+                if (avartname_combo.SelectedItem == null)
+                {
+                    
+                }
+                else
+                {
+                    parameter_combo.Items.Clear();
+                    var a = para[avartname_combo.SelectedItem.ToString()];
+                    for (int j = 0; j < a.Count; j++)
+                    {
+                        parameter_combo.Items.Add(a[j][0]);
+                    }
+                }
+            }
+            catch
             {
-                parameter_combo.Items.Add(a[j][0]);
+                MessageBox.Show("오류가 발생하였습니다.\n창초기화버튼을 눌러주세요!");
             }
         }
 
@@ -198,9 +249,6 @@ namespace Donation_attack_into_VRC
             randommax_text.Clear();
             randommin_text.Clear();
             set_text.Clear();
-            donationmax_text.Clear();
-            donationmin_text.Clear();
-            donationsame_text.Clear();
             donationmax_text.Visible = false;
             donationmin_text.Visible=false;
             donationsame_text.Visible=false;
@@ -240,6 +288,47 @@ namespace Donation_attack_into_VRC
         private void panel1_MouseUp(object sender, MouseEventArgs e)
         {
             TagMove = false;
-        }                               
+        }
+
+        private void donationmin_text_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                donationmin_text.Text = String.Format("{0:#,##0}", int.Parse(donationmin_text.Text.Replace(",","")));
+                donationmin_text.Select(donationmin_text.Text.Length, 0);
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void donationmax_text_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                donationmax_text.Text = String.Format("{0:#,##0}", int.Parse(donationmax_text.Text.Replace(",","")));
+                donationmax_text.Select(donationmax_text.Text.Length, 0);
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void donationsame_text_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                donationsame_text.Text = String.Format("{0:#,##0}", int.Parse(donationsame_text.Text.Replace(",","")));
+                donationsame_text.Select(donationsame_text.Text.Length, 0);
+            }
+            catch
+            {
+
+            }
+        }
+
+                                     
     }
 }

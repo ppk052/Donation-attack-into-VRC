@@ -162,8 +162,8 @@ namespace Donation_attack_into_VRC
         private void savelist()
         {
             List<string> list1 = new List<string>();
-            list1.Add(dialog1.donationmin);
-            list1.Add(dialog1.donationmax);
+            list1.Add(dialog1.donationmin.Replace(",",""));
+            list1.Add(dialog1.donationmax.Replace(",",""));
             list1.Add(dialog1.parametername);
             list1.Add(dialog1.parametersendtype);
             list1.Add(dialog1.value1);
@@ -258,7 +258,6 @@ namespace Donation_attack_into_VRC
                     }
             }
         }
-
     }
 
     //json파일을 읽기위한 사전작업
@@ -395,14 +394,14 @@ namespace Donation_attack_into_VRC
             {
                 try
                 {
-                    if (donationmin_text.Text == "" || donationmin_text == null || donationmax_text.Text == "" || donationmax_text == null)
+                    if (donationmin_text.Text.Replace(",", "") == "" || donationmin_text == null || donationmax_text.Text.Replace(",","") == "" || donationmax_text == null)
                     {
                         MessageBox.Show("금액을 입력하세요");
                         return false;
                     }
-                    int a = int.Parse(donationmin_text.Text);
-                    int b = int.Parse(donationmax_text.Text);
-                    if (int.Parse(donationmin_text.Text) >= int.Parse(donationmax_text.Text))
+                    int a = int.Parse(donationmin_text.Text.Replace(",",""));
+                    int b = int.Parse(donationmin_text.Text.Replace(",", ""));
+                    if (int.Parse(donationmin_text.Text.Replace(",","")) >= int.Parse(donationmax_text.Text.Replace(",","")))
                     {
                         MessageBox.Show("금액의 왼쪽값이 오른쪽값보다 작게 설정하세요");
                         return false;
@@ -420,12 +419,12 @@ namespace Donation_attack_into_VRC
             {
                 try
                 {
-                    if (donationsame_text.Text == "" || donationsame_text == null)
+                    if (donationsame_text.Text.Replace(",","") == "" || donationsame_text == null)
                     {
                         MessageBox.Show("금액을 입력하세요");
                         return false;
                     }
-                    int a = int.Parse(donationsame_text.Text);
+                    int a = int.Parse(donationsame_text.Text.Replace(",", ""));
                 }
                 catch
                 {

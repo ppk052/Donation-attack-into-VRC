@@ -314,7 +314,14 @@ namespace Donation_attack_into_VRC
         }
         private void addtextboxs(List<TextBox> target, List<string> data, int indexnum, int lenght)
         {
-            target[lenght - 1].Text = data[indexnum];
+            try
+            {
+                target[lenght - 1].Text = string.Format("{0:#,##0}", int.Parse(data[indexnum]));
+            }
+            catch
+            {
+                target[lenght - 1].Text = data[indexnum];
+            }
             target[lenght - 1].ReadOnly = true;
             target[lenght - 1].BackColor = SystemColors.HighlightText;
             target[lenght - 1].TextAlign = HorizontalAlignment.Center;
@@ -347,6 +354,12 @@ namespace Donation_attack_into_VRC
             this.Controls.Remove(target[indexnum]);
             target.RemoveAt(indexnum);
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("몽남#2410으로 연락주세요!");
+        }
+
         private void deletebuttons(List<Button> target, int indexnum)
         {
             flowLayoutPanel1.Controls.Remove(target[indexnum]);

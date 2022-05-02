@@ -44,7 +44,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.toon_back = new System.Windows.Forms.Panel();
             this.exit_button = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.exit_button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -60,12 +59,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tap2_button = new System.Windows.Forms.Button();
             this.tap1_button = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.twip_back.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // keytoonation_text
@@ -113,6 +115,7 @@
             // 
             this.tabPage1.AllowDrop = true;
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.pictureBox2);
             this.tabPage1.Controls.Add(this.keytwip_text);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.twip_back);
@@ -271,15 +274,6 @@
             this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
             this.exit_button.MouseEnter += new System.EventHandler(this.exit_button_MouseEnter);
             this.exit_button.MouseLeave += new System.EventHandler(this.exit_button_MouseLeave);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Donation_attack_into_VRC.Properties.Resources.머니건콩나물;
-            this.pictureBox1.Location = new System.Drawing.Point(656, 208);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(274, 250);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
             // 
             // tabPage2
             // 
@@ -458,7 +452,27 @@
             this.tap1_button.UseVisualStyleBackColor = false;
             this.tap1_button.Click += new System.EventHandler(this.tap1_button_Click);
             // 
-            // Form1
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Donation_attack_into_VRC.Properties.Resources.디스코드;
+            this.pictureBox2.Location = new System.Drawing.Point(9, 370);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(82, 48);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 19;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Donation_attack_into_VRC.Properties.Resources.머니건콩나물;
+            this.pictureBox1.Location = new System.Drawing.Point(656, 208);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(274, 250);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -470,7 +484,7 @@
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "Mainform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Donation to Unity";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
@@ -482,11 +496,12 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.twip_back.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -524,6 +539,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button tap2_button;
         private System.Windows.Forms.Button tap1_button;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

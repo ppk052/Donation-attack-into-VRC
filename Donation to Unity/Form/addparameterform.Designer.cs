@@ -99,13 +99,14 @@
             this.parameter_combo.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.parameter_combo.ForeColor = System.Drawing.Color.Black;
             this.parameter_combo.FormattingEnabled = true;
-            this.parameter_combo.Location = new System.Drawing.Point(105, 108);
+            this.parameter_combo.Location = new System.Drawing.Point(108, 108);
             this.parameter_combo.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.parameter_combo.Name = "parameter_combo";
             this.parameter_combo.Size = new System.Drawing.Size(178, 25);
             this.parameter_combo.TabIndex = 8;
             this.parameter_combo.TabStop = false;
             this.parameter_combo.SelectedIndexChanged += new System.EventHandler(this.parameter_combo_SelectedIndexChanged);
+            this.parameter_combo.DropDownClosed += new System.EventHandler(this.parameter_combo_SelectedIndexChanged);
             // 
             // avartname_combo
             // 
@@ -122,6 +123,7 @@
             this.avartname_combo.TabIndex = 7;
             this.avartname_combo.TabStop = false;
             this.avartname_combo.SelectedIndexChanged += new System.EventHandler(this.avartname_combo_SelectedIndexChanged);
+            this.avartname_combo.DropDownClosed += new System.EventHandler(this.avartname_combo_SelectedIndexChanged);
             // 
             // whatisuserid_bt
             // 
@@ -230,13 +232,14 @@
             this.donation_combo.Items.AddRange(new object[] {
             "범위",
             "일치"});
-            this.donation_combo.Location = new System.Drawing.Point(105, 164);
+            this.donation_combo.Location = new System.Drawing.Point(108, 163);
             this.donation_combo.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.donation_combo.Name = "donation_combo";
             this.donation_combo.Size = new System.Drawing.Size(74, 25);
             this.donation_combo.TabIndex = 21;
             this.donation_combo.TabStop = false;
             this.donation_combo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.donation_combo.DropDownClosed += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // donationmin_text
             // 
@@ -248,6 +251,7 @@
             this.donationmin_text.TabIndex = 23;
             this.donationmin_text.TabStop = false;
             this.donationmin_text.Visible = false;
+            this.donationmin_text.TextChanged += new System.EventHandler(this.donationmin_text_TextChanged);
             // 
             // donation_label
             // 
@@ -269,6 +273,7 @@
             this.donationmax_text.Size = new System.Drawing.Size(77, 25);
             this.donationmax_text.TabIndex = 25;
             this.donationmax_text.Visible = false;
+            this.donationmax_text.TextChanged += new System.EventHandler(this.donationmax_text_TextChanged);
             // 
             // donationsame_text
             // 
@@ -280,6 +285,7 @@
             this.donationsame_text.TabIndex = 26;
             this.donationsame_text.TabStop = false;
             this.donationsame_text.Visible = false;
+            this.donationsame_text.TextChanged += new System.EventHandler(this.donationsame_text_TextChanged);
             // 
             // label2
             // 
@@ -305,6 +311,7 @@
             this.setparameter_combo.TabIndex = 28;
             this.setparameter_combo.TabStop = false;
             this.setparameter_combo.SelectedIndexChanged += new System.EventHandler(this.setparameter_combo_SelectedIndexChanged);
+            this.setparameter_combo.DropDownClosed += new System.EventHandler(this.setparameter_combo_SelectedIndexChanged);
             // 
             // addparameter_bt
             // 
@@ -449,7 +456,7 @@
             this.label6.TabIndex = 40;
             this.label6.Text = "파라메터는 int와 Bool만을 지원하며, Bool은 1(true)과 0(false)만 입력가능합니다.";
             // 
-            // addparameter
+            // addparameterform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -490,7 +497,7 @@
             this.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.Name = "addparameter";
+            this.Name = "addparameterform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "addparameter";
             this.ResumeLayout(false);

@@ -83,6 +83,16 @@ namespace Donation_attack_into_VRC.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap 디스코드 {
+            get {
+                object obj = ResourceManager.GetObject("디스코드", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap 머니건콩나물 {
             get {
                 object obj = ResourceManager.GetObject("머니건콩나물", resourceCulture);
