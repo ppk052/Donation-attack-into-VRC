@@ -7,5 +7,6 @@ Donation attack into VRC(Daiv)는 투네이션과 트윕의 알림을 받아서 
 ## 사용방법
 #### 초기화면
 ![초기](https://user-images.githubusercontent.com/82574391/166342589-849cfd42-8d38-48ca-bdf5-74bd492e2c84.JPG)
-투네이션과 트윕 홈페이지 알림 홈
+투네이션과 트윕 홈페이지에 들어가서 알림위젯주소를 복사해서 입력합니다.
+
 
