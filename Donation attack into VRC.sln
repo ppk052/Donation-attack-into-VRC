@@ -5,7 +5,7 @@ VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Donation_attack_into_VRC", "Donation to Unity\Donation_attack_into_VRC.csproj", "{0D21B75E-9843-4F37-8AF5-D3014A3E8B17}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "makesetup", "makesetup\makesetup.vdproj", "{44FFA679-EC81-4E54-84CC-5BA5E3949E14}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "setup", "setup\setup.vdproj", "{216ACD5F-AF56-468C-9286-96B45736CAB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,8 @@ Global
 		{0D21B75E-9843-4F37-8AF5-D3014A3E8B17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D21B75E-9843-4F37-8AF5-D3014A3E8B17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D21B75E-9843-4F37-8AF5-D3014A3E8B17}.Release|Any CPU.Build.0 = Release|Any CPU
-		{44FFA679-EC81-4E54-84CC-5BA5E3949E14}.Debug|Any CPU.ActiveCfg = Debug
-		{44FFA679-EC81-4E54-84CC-5BA5E3949E14}.Release|Any CPU.ActiveCfg = Release
+		{216ACD5F-AF56-468C-9286-96B45736CAB4}.Debug|Any CPU.ActiveCfg = Debug
+		{216ACD5F-AF56-468C-9286-96B45736CAB4}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
