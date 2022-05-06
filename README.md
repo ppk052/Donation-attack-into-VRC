@@ -13,6 +13,7 @@ OSC를 켜는 방법은 https://docs.vrchat.com/docs/osc-overviewd 의 Enable it
 
 ### VRC OSC 전송규칙
 ![1](https://user-images.githubusercontent.com/82574391/166342619-851b4062-9b68-42c6-8f09-37138b45a9df.JPG)
+
 추가버튼을 통해 규칙을 추가하면 도네가 왔을때 금액범위에 해당하는 규칙이 작동합니다.
 
 ### 규칙 추가방법
