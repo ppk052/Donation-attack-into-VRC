@@ -364,3 +364,5 @@ FodyWeavers.xsd
 
 setup/
 makesetup/
+*.sln
+*.csproj
