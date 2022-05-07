@@ -54,6 +54,9 @@ namespace Donation_attack_into_VRC
         9. 컨트롤 색상 바꾸는 함수설정
         10. 컨트롤 생성 함수 설정
         11. 컨트롤 삭제 함수 설정
+        12. 프로그램 열때 저장데이터 불러오기
+        13. 프로그램 종료할때 데이터 저장
+
         */
 
         //1. 도네연결버튼 눌렀을때 디자인 설정
@@ -272,6 +275,7 @@ namespace Donation_attack_into_VRC
                     indexnum = i;
                 }
             }
+            parameterlist.RemoveAt(indexnum);
             deletebuttons(deletebutton, indexnum);
             deletetextboxs(donationmin, indexnum);
             deletetextboxs(donationmax, indexnum);
@@ -365,6 +369,42 @@ namespace Donation_attack_into_VRC
             flowLayoutPanel1.Controls.Remove(target[indexnum]);
             this.Controls.Remove(target[indexnum]);
             target.RemoveAt(indexnum);
-        }        
+        }
+
+        //12. 프로그램 열때 저장데이터 불러오기
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            CheckForIllegalCrossThreadCalls = false;
+            keytoonation_text.Text = Properties.Settings.Default.toonationtoken;
+            keytwip_text.Text = Properties.Settings.Default.twiptoken;
+            try
+            {
+                parameterlist.Clear();
+                Stream rs = new FileStream("C:\\Program Files (x86)\\Donation attack into VRC\\data.xml", FileMode.Open);
+                BinaryFormatter deserilizer = new BinaryFormatter();
+                parameterlist = (List<List<string>>)deserilizer.Deserialize(rs);       
+                rs.Close();
+                foreach (List<string> list in parameterlist)
+                {
+                    makeoscform(list);
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
+        //13. 프로그램 종료할때 데이터 저장
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Properties.Settings.Default.toonationtoken = keytoonation_text.Text;
+            Properties.Settings.Default.twiptoken = keytwip_text.Text;
+            Properties.Settings.Default.Save();
+            Stream ws = new FileStream("C:\\Program Files (x86)\\Donation attack into VRC\\data.xml", FileMode.Create);
+            BinaryFormatter serializer = new BinaryFormatter();
+            serializer.Serialize(ws, parameterlist);
+            ws.Close();
+        }
     }
 }

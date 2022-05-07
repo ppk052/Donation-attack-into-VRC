@@ -122,41 +122,7 @@ namespace Donation_attack_into_VRC
             }
         }
 
-        //프로그램 열때 저장데이터 불러오기
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            CheckForIllegalCrossThreadCalls = false;
-            keytoonation_text.Text = Properties.Settings.Default.toonationtoken;
-            keytwip_text.Text = Properties.Settings.Default.twiptoken;
-            try
-            {
-                Stream rs = new FileStream("oscdata.dat", FileMode.Open);
-                BinaryFormatter deserilizer = new BinaryFormatter();
-                parameterlist = (List<List<string>>)deserilizer.Deserialize(rs);
-                rs.Close();
-                foreach (List<string> list in parameterlist)
-                {
-                    makeoscform(list);
-                }
-            }
-            catch
-            {
-
-            }
-
-        }
-
-        //프로그램 종료할때 데이터 저장
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Properties.Settings.Default.toonationtoken = keytoonation_text.Text;
-            Properties.Settings.Default.twiptoken = keytwip_text.Text;
-            Properties.Settings.Default.Save();
-            Stream ws = new FileStream("oscdata.dat", FileMode.Create);
-            BinaryFormatter serializer = new BinaryFormatter();
-            serializer.Serialize(ws, parameterlist);
-            ws.Close();
-        }
+        
 
         //OSC설정을 리스트에 저장
         private void savelist()
@@ -257,6 +223,18 @@ namespace Donation_attack_into_VRC
                         break;
                     }
             }
+        }
+
+        //데이터저장함수 설정
+        private void savedata()
+        {
+            
+        }
+
+        //데이터로드함수 설정
+        private void loaddata()
+        {
+            
         }
     }
 
@@ -543,5 +521,7 @@ namespace Donation_attack_into_VRC
             Sendlist();
             this.Hide();
         }
+
+        
     }
 }
