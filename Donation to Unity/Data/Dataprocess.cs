@@ -108,11 +108,11 @@ namespace Donation_attack_into_VRC
                                 }
                                 else
                                 {
-                                    var message = new OscMessage("/avatar/parameters/" + parameterlist[i][2], parameterlist[i][4]);
+                                    var message = new OscMessage("/avatar/parameters/" + parameterlist[i][2], int.Parse(parameterlist[i][4]));
                                     var sender = new UDPSender("127.0.0.1", 9000);
                                     sender.Send(message);
                                     await Task.Delay(int.Parse(parameterlist[i][5]) * 1000);
-                                    var message2 = new OscMessage("/avatar/parameters/" + parameterlist[i][2], parameterlist[i][6]);
+                                    var message2 = new OscMessage("/avatar/parameters/" + parameterlist[i][2], int.Parse(parameterlist[i][6]));
                                     sender.Send(message2);
                                 }
                                 break;
